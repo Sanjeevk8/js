@@ -12,17 +12,19 @@
 
 </body>
 <script>
-    const sayDate = function(str){
+    let itervalId;
+    const start = function(str){
         console.log(str,Date.now());
     }
-    const itervalId = setInterval(sayDate, 1000,"Hi")
-    document.querySelector("#start").addEventListener('click', 'itervalId')
+     itervalId = setInterval(start, 1000,"Hi")
 
 
-    // const stop = clearInterval(itervalId)
-    document.querySelector("#stop").addEventListener('click',function(){
+     const stop =  function(){
         clearInterval(itervalId)
-    })
+     }
+    document.querySelector("#start").addEventListener('click', start)
+    document.querySelector("#stop").addEventListener('click', stop)
+        
 
 </script>
 </html>
